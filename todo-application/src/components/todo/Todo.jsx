@@ -12,7 +12,6 @@ function Todo() {
     //to create a todo
     if (type === "add-todo") {
       event.preventDefault();
-      console.log("coming inside this");
       if (todoTitle !== "" && todoTitle.length > 3) {
         let newTodo = { id: randomId(), todo: todoTitle, isDone: false };
         setTodo([...todos, newTodo]);
