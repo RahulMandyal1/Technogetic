@@ -6,16 +6,16 @@ const API_KEY = "kAmWxc3bzmUZBpfRPvpgK0KLOObZUnEig1l9";
 // Add this, never use it client side in production
 const API_SECRET = "zNhJsjSsZfNjjHgmbhgjvHyHQaZewU0M";
 // This can be your Personal Meeting ID
-const MEETING_NUMBER = 1234567890;
+const MEETING_NUMBER = 91090113594;
 
 
 const meetConfig = {
   apiKey: API_KEY,
   apiSecret: API_SECRET,
   meetingNumber: MEETING_NUMBER,
-  userName: "test user",
-  passWord: "",
-  leaveUrl: "https://zoom.us",
+  userName: "RahulThakur",
+  passWord: "Hxmg5e",
+  leaveUrl: "http://127.0.0.1:5173/"",
   role: 0,
 };
 
@@ -48,7 +48,7 @@ function Zoom() {
               userName: meetConfig.userName,
               signature: res.result,
               apiKey: meetConfig.apiKey,
-              userEmail: "email@gmail.com",
+              userEmail: "rahulmandyl079@gmail.com",
               passWord: meetConfig.passWord,
               success() {
                 console.log("join meeting success");
