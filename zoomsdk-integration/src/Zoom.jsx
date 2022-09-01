@@ -22,15 +22,15 @@ const meetConfig = {
 
 
 function Zoom() {
-  let [meetingLaunched, setMeetingLaunched] = useState(true);
+  let [meetingLaunched, setMeetingLaunched] = useState(false);
   useEffect(() => {
     ZoomMtg.setZoomJSLib("https://source.zoom.us/1.7.0/lib", "/av");
     ZoomMtg.preLoadWasm();
     ZoomMtg.prepareJssdk();
   }, []);
-  launchMeeting = () => {
+  const launchMeeting = () => {
     // change state of meeting
-    this.setState({ meetingLaunched: !this.state.meetingLaunched });
+    setMeetingLaunched(true);
 
     // generateSignature should only be used in development
     ZoomMtg.generateSignature({
@@ -68,7 +68,7 @@ function Zoom() {
   return (
     <>
       {!meetingLaunched ? (
-        <button className="launchButton" onClick={this.launchMeeting}>
+        <button className="launchButton" onClick={launchMeeting}>
           Launch Meeting
         </button>
       ) : (
